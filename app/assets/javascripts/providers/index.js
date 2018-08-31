@@ -1,6 +1,6 @@
 import {provide, unshiftMiddleware, createCombinedStore, unshiftEnhancer} from 'react-redux-provide';
 import page, {PUSH_WINDOW_PATH, REPLACE_WINDOW_PATH} from 'provide-page';
-import createLoggerMiddleware from 'redux-logger';
+import { createLogger } from 'redux-logger';
 
 import Document from './Document';
 import Directory from './Directory';
@@ -29,7 +29,7 @@ import reports from './reports';
 import search from './search';
 import tasks from './tasks';
 
-const loggerMiddleware = createLoggerMiddleware();
+const loggerMiddleware = createLogger();
 
 const providers = {
     page,

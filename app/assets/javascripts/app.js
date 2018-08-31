@@ -18,8 +18,6 @@ import 'babel-polyfill';
 import React, { Component, PropTypes } from 'react';
 import { render } from 'react-dom'
 
-import injectTapEventPlugin from 'react-tap-event-plugin';
-
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 
 import FirstVoicesTheme from 'views/themes/FirstVoicesTheme.js';
@@ -37,8 +35,6 @@ require('!style-loader!css-loader!alloyeditor/dist/alloy-editor/assets/alloy-edi
 require('!style-loader!css-loader!tether-shepherd/dist/css/shepherd-theme-arrows.css');
 require('bootstrap/less/bootstrap');
 require("styles/main");
-
-injectTapEventPlugin();
 
 const context = {
     providers,

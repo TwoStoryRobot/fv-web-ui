@@ -25,10 +25,6 @@ import Paper from 'material-ui/lib/paper';
 
 import withPagination from 'views/hoc/grid-list/with-pagination';
 
-// is TapEvent needed here?! Test on mobile
-//var injectTapEventPlugin = require("react-tap-event-plugin");
-//injectTapEventPlugin();
-
 // Stylesheet
 import '!style-loader!css-loader!react-datagrid/dist/index.min.css';
 

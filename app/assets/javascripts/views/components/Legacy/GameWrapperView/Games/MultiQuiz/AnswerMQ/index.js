@@ -22,8 +22,6 @@ var {RaisedButton} = Mui;
 
 var WordOperations = require('operations/WordOperations');
 
-var injectTapEventPlugin = require("react-tap-event-plugin");
-
 // https://github.com/facebook/react/issues/3451#issuecomment-83000311
 var ThemeManager = new Mui.Styles.ThemeManager();
 
@@ -31,12 +29,6 @@ class AnswerMQ extends React.Component {
 
   constructor(props) {
     super(props);
-
-    //Needed for onTouchTap
-    //Can go away when react 1.0 release
-    //Check this repo:
-    //https://github.com/zilverline/react-tap-event-plugin
-    injectTapEventPlugin();
 
     this.eventName = "ANSWERMQ";
 
@@ -105,7 +97,7 @@ class AnswerMQ extends React.Component {
 
     return <div className="col-xs-6">
       <div className={classNames('imgContAnswer', (this.props.selected) ? 'selectedImgContAnswer' : '')}>
-        {(this.state.image != null) ? <img onTouchTap={this._handleClick} className="image" src={this.state.image} alt=""/> : 'Loading...' }
+        {(this.state.image != null) ? <img onClick={this._handleClick} className="image" src={this.state.image} alt=""/> : 'Loading...' }
       </div>
       <audio src={this.state.audio} className="audio" id={(this.state.answer != undefined) ? this.state.answer.uid + '-audio' : ''} type="audio/mp4" preload="auto" />
     </div>;
